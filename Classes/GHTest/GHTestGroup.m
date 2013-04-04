@@ -257,6 +257,7 @@ status=status_, testCase=testCase_, exception=exception_, options=options_;
 }
 
 - (void)_run:(NSOperationQueue *)operationQueue {
+    NSLog(@"_run:(NSOperationQueue *)operationQueue");
   if (status_ == GHTestStatusCancelled || [self hasEnabledChildren]) {
     return;
   }
@@ -321,13 +322,19 @@ status=status_, testCase=testCase_, exception=exception_, options=options_;
   return NO;
 }
 
-- (void)run:(GHTestOptions)options {  
+- (void)run:(GHTestOptions)options {
+    NSLog(@"(GHTestOptions)options");
   options_ = options;
+     NSLog(@"(GHTestOptions)options");
   [self _reset];
   if ([self shouldRunOnMainThread]) {
+      NSLog(@"[self shouldRunOnMainThread]");
     [self performSelectorOnMainThread:@selector(_run:) withObject:nil waitUntilDone:YES];
+      NSLog(@"After [self shouldRunOnMainThread]");
   } else {
+      NSLog(@"[[self _run:nil];]");
     [self _run:nil];
+     NSLog(@"After [[self _run:nil];]");
   } 
 }
 

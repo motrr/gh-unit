@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ScopicSoftware/GHUnit/svn/!svn/ver/5/gh-unit/Examples/MyTestable-iOS/Tests
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-iOS/Tests/main.m
+END
+.DS_Store
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-iOS/Tests/.DS_Store
+END
+MyTest.m
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ScopicSoftware/GHUnit/svn/!svn/ver/5/gh-unit/Examples/MyTestable-iOS/Tests/MyTest.m
+END
+Tests-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-iOS/Tests/Tests-Info.plist
+END
+MyViewTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-iOS/Tests/MyViewTest.h
+END
+Tests-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-iOS/Tests/Tests-Prefix.pch
+END
+MyViewTest.m
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-iOS/Tests/MyViewTest.m
+END

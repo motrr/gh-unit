@@ -20,7 +20,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0012D1EC140EFD960093EC59 /* libGHUnitIOSSimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0041C5EA13BA7B8A0015FC22 /* libGHUnitIOSSimulator.a */; };
 		0041C5EE13BA7B8A0015FC22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0041C5ED13BA7B8A0015FC22 /* Foundation.framework */; };
 		0041C65613BA7C9A0015FC22 /* GHAsyncTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 0041C62113BA7C9A0015FC22 /* GHAsyncTestCase.h */; };
 		0041C65713BA7C9A0015FC22 /* GHAsyncTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 0041C62113BA7C9A0015FC22 /* GHAsyncTestCase.h */; };
@@ -145,6 +144,24 @@
 		00CEA042156C2E0B00BA3276 /* GHUIImageViewControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 00CEA03F156C2E0B00BA3276 /* GHUIImageViewControl.h */; };
 		00CEA043156C2E0B00BA3276 /* GHUIImageViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CEA040156C2E0B00BA3276 /* GHUIImageViewControl.m */; };
 		00CEA044156C2E0B00BA3276 /* GHUIImageViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CEA040156C2E0B00BA3276 /* GHUIImageViewControl.m */; };
+		0FA3F6DF16FEE9B80012E704 /* DCRoundSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA3F6D716FEE9B80012E704 /* DCRoundSwitch.h */; };
+		0FA3F6E016FEE9B80012E704 /* DCRoundSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA3F6D716FEE9B80012E704 /* DCRoundSwitch.h */; };
+		0FA3F6E116FEE9B80012E704 /* DCRoundSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3F6D816FEE9B80012E704 /* DCRoundSwitch.m */; };
+		0FA3F6E216FEE9B80012E704 /* DCRoundSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3F6D816FEE9B80012E704 /* DCRoundSwitch.m */; };
+		0FA3F6E416FEE9B80012E704 /* DCRoundSwitchKnobLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA3F6D916FEE9B80012E704 /* DCRoundSwitchKnobLayer.h */; };
+		0FA3F6E516FEE9B80012E704 /* DCRoundSwitchKnobLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA3F6D916FEE9B80012E704 /* DCRoundSwitchKnobLayer.h */; };
+		0FA3F6E616FEE9B80012E704 /* DCRoundSwitchKnobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3F6DA16FEE9B80012E704 /* DCRoundSwitchKnobLayer.m */; };
+		0FA3F6E716FEE9B80012E704 /* DCRoundSwitchKnobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3F6DA16FEE9B80012E704 /* DCRoundSwitchKnobLayer.m */; };
+		0FA3F6E916FEE9B80012E704 /* DCRoundSwitchOutlineLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA3F6DB16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.h */; };
+		0FA3F6EA16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA3F6DB16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.h */; };
+		0FA3F6EB16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3F6DC16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.m */; };
+		0FA3F6EC16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3F6DC16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.m */; };
+		0FA3F6EE16FEE9B80012E704 /* DCRoundSwitchToggleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA3F6DD16FEE9B80012E704 /* DCRoundSwitchToggleLayer.h */; };
+		0FA3F6EF16FEE9B80012E704 /* DCRoundSwitchToggleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA3F6DD16FEE9B80012E704 /* DCRoundSwitchToggleLayer.h */; };
+		0FA3F6F016FEE9B80012E704 /* DCRoundSwitchToggleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3F6DE16FEE9B80012E704 /* DCRoundSwitchToggleLayer.m */; };
+		0FA3F6F116FEE9B80012E704 /* DCRoundSwitchToggleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3F6DE16FEE9B80012E704 /* DCRoundSwitchToggleLayer.m */; };
+		0FC0B2EA1703538500C9ED33 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC0B2E91703538500C9ED33 /* QuartzCore.framework */; };
+		0FC0B2EF1703555200C9ED33 /* libGHUnitIOSSimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0041C5EA13BA7B8A0015FC22 /* libGHUnitIOSSimulator.a */; };
 		42187C1815BF472300E702B6 /* GHUnitIOSTestViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 42187C1715BF472300E702B6 /* GHUnitIOSTestViewTest.m */; };
 		421C7B8F13F0AF1D00E21E74 /* GHUnitIOSTestView.h in Headers */ = {isa = PBXBuildFile; fileRef = 421C7B8D13F0AF1D00E21E74 /* GHUnitIOSTestView.h */; };
 		421C7B9013F0AF1D00E21E74 /* GHUnitIOSTestView.h in Headers */ = {isa = PBXBuildFile; fileRef = 421C7B8D13F0AF1D00E21E74 /* GHUnitIOSTestView.h */; };
@@ -163,7 +180,6 @@
 		42A274AC16361D9500BA4C74 /* GHTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A274A916361D9500BA4C74 /* GHTestUtils.m */; };
 		42A274AD16361D9500BA4C74 /* GHTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A274A916361D9500BA4C74 /* GHTestUtils.m */; };
 		42A274B216361F4200BA4C74 /* GHTestUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A274B116361F4200BA4C74 /* GHTestUtilsTest.m */; };
-		42A274F61637535900BA4C74 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A678EE1401423D0060D1B5 /* QuartzCore.framework */; };
 		42A678EF1401423D0060D1B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A678EE1401423D0060D1B5 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -251,7 +267,6 @@
 		0097C4AF13BA7FC800D3BEF0 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		0097C4B113BA7FC800D3BEF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0097C4B313BA7FC900D3BEF0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		00C9797613BA802400FC285C /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
 		00C9797B13BA809600FC285C /* example.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example.json; sourceTree = "<group>"; };
 		00C9797C13BA809600FC285C /* GHAsyncTestCaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHAsyncTestCaseTest.m; sourceTree = "<group>"; };
 		00C9797D13BA809600FC285C /* GHGTMTestCaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGTMTestCaseTest.m; sourceTree = "<group>"; };
@@ -278,6 +293,16 @@
 		00C979CE13BA8A5000FC285C /* GHUnitIPhoneAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitIPhoneAppDelegate.m; sourceTree = "<group>"; };
 		00CEA03F156C2E0B00BA3276 /* GHUIImageViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUIImageViewControl.h; sourceTree = "<group>"; };
 		00CEA040156C2E0B00BA3276 /* GHUIImageViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUIImageViewControl.m; sourceTree = "<group>"; };
+		0FA3F6D716FEE9B80012E704 /* DCRoundSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRoundSwitch.h; sourceTree = "<group>"; };
+		0FA3F6D816FEE9B80012E704 /* DCRoundSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRoundSwitch.m; sourceTree = "<group>"; };
+		0FA3F6D916FEE9B80012E704 /* DCRoundSwitchKnobLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRoundSwitchKnobLayer.h; sourceTree = "<group>"; };
+		0FA3F6DA16FEE9B80012E704 /* DCRoundSwitchKnobLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRoundSwitchKnobLayer.m; sourceTree = "<group>"; };
+		0FA3F6DB16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRoundSwitchOutlineLayer.h; sourceTree = "<group>"; };
+		0FA3F6DC16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRoundSwitchOutlineLayer.m; sourceTree = "<group>"; };
+		0FA3F6DD16FEE9B80012E704 /* DCRoundSwitchToggleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCRoundSwitchToggleLayer.h; sourceTree = "<group>"; };
+		0FA3F6DE16FEE9B80012E704 /* DCRoundSwitchToggleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCRoundSwitchToggleLayer.m; sourceTree = "<group>"; };
+		0FC0B2E7170352FE00C9ED33 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = build/Framework/GHUnitIOS.framework; sourceTree = "<group>"; };
+		0FC0B2E91703538500C9ED33 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		42187C1715BF472300E702B6 /* GHUnitIOSTestViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitIOSTestViewTest.m; sourceTree = "<group>"; };
 		421C7B8D13F0AF1D00E21E74 /* GHUnitIOSTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUnitIOSTestView.h; sourceTree = "<group>"; };
 		421C7B8E13F0AF1D00E21E74 /* GHUnitIOSTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitIOSTestView.m; sourceTree = "<group>"; };
@@ -312,11 +337,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC0B2EF1703555200C9ED33 /* libGHUnitIOSSimulator.a in Frameworks */,
+				0FC0B2EA1703538500C9ED33 /* QuartzCore.framework in Frameworks */,
 				0097C4AA13BA7FC800D3BEF0 /* UIKit.framework in Frameworks */,
 				0097C4AB13BA7FC800D3BEF0 /* Foundation.framework in Frameworks */,
 				0097C4AC13BA7FC800D3BEF0 /* CoreGraphics.framework in Frameworks */,
-				0012D1EC140EFD960093EC59 /* libGHUnitIOSSimulator.a in Frameworks */,
-				42A274F61637535900BA4C74 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +351,8 @@
 		0041C5DF13BA7B8A0015FC22 = {
 			isa = PBXGroup;
 			children = (
+				0FC0B2E91703538500C9ED33 /* QuartzCore.framework */,
+				0FC0B2E7170352FE00C9ED33 /* GHUnitIOS.framework */,
 				00C979CA13BA81E200FC285C /* CHANGELOG.md */,
 				00C979CB13BA81E200FC285C /* README.md */,
 				0041C6B813BA7CBE0015FC22 /* Makefile */,
@@ -356,7 +383,6 @@
 			isa = PBXGroup;
 			children = (
 				42A678EE1401423D0060D1B5 /* QuartzCore.framework */,
-				00C9797613BA802400FC285C /* GHUnitIOS.framework */,
 				0041C5ED13BA7B8A0015FC22 /* Foundation.framework */,
 				0097C42313BA7E5000D3BEF0 /* UIKit.framework */,
 				0097C42613BA7E5000D3BEF0 /* CoreGraphics.framework */,
@@ -461,6 +487,7 @@
 		0041C64813BA7C9A0015FC22 /* Classes-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				0FA3F6D616FEE9970012E704 /* DCRoundSwitch */,
 				0041C64913BA7C9A0015FC22 /* GHUnitIOSAppDelegate.h */,
 				0041C64A13BA7C9A0015FC22 /* GHUnitIOSAppDelegate.m */,
 				00C979CD13BA8A5000FC285C /* GHUnitIPhoneAppDelegate.h */,
@@ -583,6 +610,21 @@
 			path = GTM;
 			sourceTree = "<group>";
 		};
+		0FA3F6D616FEE9970012E704 /* DCRoundSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3F6D716FEE9B80012E704 /* DCRoundSwitch.h */,
+				0FA3F6D816FEE9B80012E704 /* DCRoundSwitch.m */,
+				0FA3F6D916FEE9B80012E704 /* DCRoundSwitchKnobLayer.h */,
+				0FA3F6DA16FEE9B80012E704 /* DCRoundSwitchKnobLayer.m */,
+				0FA3F6DB16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.h */,
+				0FA3F6DC16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.m */,
+				0FA3F6DD16FEE9B80012E704 /* DCRoundSwitchToggleLayer.h */,
+				0FA3F6DE16FEE9B80012E704 /* DCRoundSwitchToggleLayer.m */,
+			);
+			name = DCRoundSwitch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -621,6 +663,10 @@
 				4228635814595D0400BF3ED2 /* GHImageDiffView.h in Headers */,
 				00CEA041156C2E0B00BA3276 /* GHUIImageViewControl.h in Headers */,
 				42A274AA16361D9500BA4C74 /* GHTestUtils.h in Headers */,
+				0FA3F6DF16FEE9B80012E704 /* DCRoundSwitch.h in Headers */,
+				0FA3F6E416FEE9B80012E704 /* DCRoundSwitchKnobLayer.h in Headers */,
+				0FA3F6E916FEE9B80012E704 /* DCRoundSwitchOutlineLayer.h in Headers */,
+				0FA3F6EE16FEE9B80012E704 /* DCRoundSwitchToggleLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +705,10 @@
 				00CEA042156C2E0B00BA3276 /* GHUIImageViewControl.h in Headers */,
 				423AF3391460969000F04DC7 /* GHImageDiffView.h in Headers */,
 				42A274AB16361D9500BA4C74 /* GHTestUtils.h in Headers */,
+				0FA3F6E016FEE9B80012E704 /* DCRoundSwitch.h in Headers */,
+				0FA3F6E516FEE9B80012E704 /* DCRoundSwitchKnobLayer.h in Headers */,
+				0FA3F6EA16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.h in Headers */,
+				0FA3F6EF16FEE9B80012E704 /* DCRoundSwitchToggleLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,6 +888,10 @@
 				4228635914595D0400BF3ED2 /* GHImageDiffView.m in Sources */,
 				00CEA043156C2E0B00BA3276 /* GHUIImageViewControl.m in Sources */,
 				42A274AC16361D9500BA4C74 /* GHTestUtils.m in Sources */,
+				0FA3F6E116FEE9B80012E704 /* DCRoundSwitch.m in Sources */,
+				0FA3F6E616FEE9B80012E704 /* DCRoundSwitchKnobLayer.m in Sources */,
+				0FA3F6EB16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.m in Sources */,
+				0FA3F6F016FEE9B80012E704 /* DCRoundSwitchToggleLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,6 +926,10 @@
 				00CEA044156C2E0B00BA3276 /* GHUIImageViewControl.m in Sources */,
 				423AF3371460965C00F04DC7 /* GHImageDiffView.m in Sources */,
 				42A274AD16361D9500BA4C74 /* GHTestUtils.m in Sources */,
+				0FA3F6E216FEE9B80012E704 /* DCRoundSwitch.m in Sources */,
+				0FA3F6E716FEE9B80012E704 /* DCRoundSwitchKnobLayer.m in Sources */,
+				0FA3F6EC16FEE9B80012E704 /* DCRoundSwitchOutlineLayer.m in Sources */,
+				0FA3F6F116FEE9B80012E704 /* DCRoundSwitchToggleLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,6 +1075,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/build/Framework\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1044,6 +1103,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/build/Framework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";

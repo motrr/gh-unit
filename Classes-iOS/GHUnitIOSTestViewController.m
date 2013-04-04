@@ -34,9 +34,11 @@
 
 - (id)init {
   if ((self = [super init])) {
+    NSLog(testNode_.isSelected?@"Selected YES": @"Selected NO");
     UIBarButtonItem *runButton = [[UIBarButtonItem alloc] initWithTitle:@"Re-run" style:UIBarButtonItemStyleDone
                                                  target:self action:@selector(_runTest)];
     self.navigationItem.rightBarButtonItem = runButton;
+    
   }
   return self;
 }
@@ -46,6 +48,7 @@
   testView_ = [[GHUnitIOSTestView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
   testView_.controlDelegate = self;
   self.view = testView_;
+ 
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -68,7 +71,7 @@
   [imageDiffView_ setSavedImage:savedImage renderedImage:renderedImage diffImage:diffImage];
   UIViewController *viewController = [[UIViewController alloc] init];
   viewController.view = imageDiffView_;
-  [self.navigationController pushViewController:viewController animated:YES];
+  [self.navigationController pushViewController:viewController animated:NO];
 }
 
 - (NSString *)updateTestView {
@@ -100,6 +103,29 @@
   testNode_ = [GHTestNode nodeWithTest:test children:nil source:nil];
   NSString *text = [self updateTestView];
   NSLog(@"%@", text);
+}
+
+- (void)setTest:(id<GHTest>)test isSelected:(BOOL)isSelected{
+    [self view];
+    self.title = [test name];
+    
+    testNode_ = [GHTestNode nodeWithTest:test children:nil source:nil];
+    NSString *text = [self updateTestView];
+    NSLog(@"%@", text);
+    isTestSelected = isSelected;
+    [self.navigationItem.rightBarButtonItem setEnabled:isTestSelected];
+    if(testNode_.status==GHTestStatusSucceeded || testNode_.status == GHTestStatusErrored)
+        self.navigationItem.rightBarButtonItem.title = @"Re-run";
+    else
+        self.navigationItem.rightBarButtonItem.title = @"Run";
+    
+}
+
+#pragma mark UIViewController Delegate
+
+- (void ) viewDidDisappear:(BOOL)animated{
+    [self.delegate setNullTestViewController];
+
 }
 
 #pragma mark Delegates (GHUnitIOSTestView)

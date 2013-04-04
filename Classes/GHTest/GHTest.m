@@ -190,6 +190,7 @@ exception=exception_, status=status_, log=log_, identifier=identifier_, disabled
 }
 
 - (void)run:(GHTestOptions)options {
+    NSLog(@"run:(GHTestOptions)options");
   if (status_ == GHTestStatusCancelled || disabled_ || hidden_) return;
   
   if ((options & GHTestOptionForceSetUpTearDownClass) == GHTestOptionForceSetUpTearDownClass) {
@@ -200,7 +201,7 @@ exception=exception_, status=status_, log=log_, identifier=identifier_, disabled
   status_ = GHTestStatusRunning;
   
   [delegate_ testDidStart:self source:self];
-  
+  NSLog(@"after [delegate_ testDidStart:self source:self];");
   [self _setLogWriter:self];
 
   BOOL reraiseExceptions = ((options & GHTestOptionReraiseExceptions) == GHTestOptionReraiseExceptions);

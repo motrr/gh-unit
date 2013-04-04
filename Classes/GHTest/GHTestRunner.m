@@ -116,18 +116,21 @@ operationQueue=operationQueue_;
 }
 
 - (int)runTests {
-  if (cancelling_ || running_) return -1;
-  
-  running_ = YES;
-  startInterval_ = [NSDate timeIntervalSinceReferenceDate];
-  [self _notifyStart];
-  
-  if (operationQueue_ && [test_ respondsToSelector:@selector(runInOperationQueue:options:)]) {
-    [(id)test_ runInOperationQueue:operationQueue_ options:options_];
-  } else {
-    [test_ run:options_];
-  }
-  return (int)self.stats.failureCount;
+    //NSLog(@"runTests");
+    if (cancelling_ || running_) return -1;
+    
+    running_ = YES;
+    startInterval_ = [NSDate timeIntervalSinceReferenceDate];
+    [self _notifyStart];
+    
+    if (operationQueue_ && [test_ respondsToSelector:@selector(runInOperationQueue:options:)]) {
+        [(id)test_ runInOperationQueue:operationQueue_ options:options_];
+    } else {
+        //NSLog(@" [test_ run:options_];");
+        [test_ run:options_];
+        //NSLog(@"After [test_ run:options_];");
+    }
+    return (int)self.stats.failureCount;
 }
 
 - (NSTimeInterval)interval {

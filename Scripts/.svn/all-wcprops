@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Scripts
+END
+CombineLibs.sh
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Scripts/CombineLibs.sh
+END
+RunTests.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Scripts/RunTests.sh
+END
+iOSFramework.sh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Scripts/iOSFramework.sh
+END
+PrepareUITests.sh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Scripts/PrepareUITests.sh
+END
+CopyTestImages.sh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Scripts/CopyTestImages.sh
+END
+RunIPhoneSecurityd.sh
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Scripts/RunIPhoneSecurityd.sh
+END
+AddNewLineEOF.sh
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Scripts/AddNewLineEOF.sh
+END

@@ -44,7 +44,6 @@
 #import "NSValue+GHValueFormatter.h"
 
 #if TARGET_OS_IPHONE
-#import "GHUnitIOSAppDelegate.h"
 #import "GHViewTestCase.h"
 #endif
 

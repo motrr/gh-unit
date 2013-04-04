@@ -28,6 +28,7 @@
 //
 
 #import "GHUnitIOSViewController.h"
+//#import "DCRoundSwitch.h"
 
 NSString *const GHUnitTextFilterKey = @"TextFilter";
 NSString *const GHUnitFilterKey = @"Filter";
@@ -60,27 +61,54 @@ NSString *const GHUnitFilterKey = @"Filter";
 - (void)saveDefaults {
   [dataSource_ saveDefaults];
 }
+- (void) switchChanged: sender{
+    UISwitch* switchControl = sender;
+    NSLog( @"The switch is %@", switchControl.on ? @"ON" : @"OFF" );
+    [self.dataSource setSelectedForAllNodes:switchControl.on];
+    [self reload];
 
+}
 - (void)loadView {
   [super loadView];
 
   runButton_ = [[UIBarButtonItem alloc] initWithTitle:@"Run" style:UIBarButtonItemStyleDone
                                                target:self action:@selector(_toggleTestsRunning)];
-  self.navigationItem.rightBarButtonItem = runButton_;  
-
+    selectAllNoneButton_ = [[UIBarButtonItem alloc] initWithTitle:@"Select all" style:UIBarButtonItemStyleDone target:self action:@selector(toggleSelectAllNone)];
+  self.navigationItem.rightBarButtonItem = runButton_;
+  self.navigationItem.leftBarButtonItem = selectAllNoneButton_;
+  [runButton_ setEnabled:NO];
+    /*
+  DCRoundSwitch *switchView = [[DCRoundSwitch alloc] initWithFrame:CGRectMake(0.0f, 5.0f, 140.0f, 30.0f)];
+    switchView.offText = @"Select None";
+    switchView.onText = @"Select All";
+  //[switchView setOffImage: [UIImage imageNamed:@"OffState.png"]];
+  //[switchView setOnImage:[UIImage imageNamed:@"OnState.png"]];
+  
+    [switchView setOn:NO animated:NO];
+    
+  [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+    UIBarButtonItem *switchBarItem = [[UIBarButtonItem alloc] initWithCustomView:switchView];
+    
+    self.navigationItem.leftBarButtonItem = switchBarItem;
+    switchView= nil;
+    switchBarItem = nil;
+     */
+    
   // Clear view
   view_.tableView.delegate = nil;
   view_.searchBar.delegate = nil;
   
   view_ = [[GHUnitIOSView alloc] initWithFrame:CGRectMake(0, 0, 320, 344)];
   view_.searchBar.delegate = self;
+  self.dataSource.delegate = self;
   NSString *textFilter = [self _textFilter];
   if (textFilter) view_.searchBar.text = textFilter;  
   view_.filterControl.selectedSegmentIndex = [self _filterIndex];
   [view_.filterControl addTarget:self action:@selector(_filterChanged:) forControlEvents:UIControlEventValueChanged];
   view_.tableView.delegate = self;
   view_.tableView.dataSource = self.dataSource;
-  self.view = view_;  
+  self.view = view_;
+  [self.dataSource setSelectedForAllNodesAndUpdateGHTestStatus:false];
   [self reload];
 }
 
@@ -100,25 +128,50 @@ NSString *const GHUnitFilterKey = @"Filter";
 - (void)reload {
   [self.dataSource.root setTextFilter:[self _textFilter]];  
   [self.dataSource.root setFilter:[self _filterIndex]];
-  [view_.tableView reloadData]; 
+  [view_.tableView reloadData];
+  BOOL isANodeSelect = [self.dataSource isANodesSelected];
+    [runButton_ setEnabled:isANodeSelect];
+  //isTappingAtCell = FALSE;
+}
+
+#pragma mark Select All/None
+
+- (void) toggleSelectAllNone{
+    if([selectAllNoneButton_.title isEqualToString:@"Select all"]){
+        selectAllNoneButton_.title = @"Select none";
+        [runButton_ setEnabled:YES];
+        [self.dataSource setSelectedForAllNodes:YES];
+        [self reload];
+    }else if([selectAllNoneButton_.title isEqualToString:@"Select none"]){
+        selectAllNoneButton_.title = @"Select all";
+        [runButton_ setEnabled:NO];
+        [self.dataSource setSelectedForAllNodes:NO];
+        [self reload];
+    }
+
 }
 
 #pragma mark Running
 
 - (void)_toggleTestsRunning {
   if (self.dataSource.isRunning) [self cancel];
-  else [self runTests];
+  else {
+      [self runTests];
+  }
 }
+
 
 - (void)runTests {
   if (self.dataSource.isRunning) return;
   
   [self view];
+  
   runButton_.title = @"Cancel";
   userDidDrag_ = NO; // Reset drag status
   view_.statusLabel.textColor = [UIColor blackColor];
   view_.statusLabel.text = @"Starting tests...";
   [self.dataSource run:self inParallel:NO options:0];
+  //[self.dataSource ru]
 }
 
 - (void)cancel {
@@ -190,28 +243,60 @@ NSString *const GHUnitFilterKey = @"Filter";
 #pragma mark Delegates (UITableView)
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  GHTestNode *node = [dataSource_ nodeForIndexPath:indexPath];
-  if (dataSource_.isEditing) {
-    [node setSelected:![node isSelected]];
-    [node notifyChanged];
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    [view_.tableView reloadData];
-  } else {    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    GHTestNode *sectionNode = [[[dataSource_ root] children] objectAtIndex:indexPath.section];
-    GHTestNode *testNode = [[sectionNode children] objectAtIndex:indexPath.row];
     
-    GHUnitIOSTestViewController *testViewController = [[GHUnitIOSTestViewController alloc] init]; 
-    [testViewController setTest:testNode.test];
-    [self.navigationController pushViewController:testViewController animated:YES];
-  }
+    GHTestNode *node = [dataSource_ nodeForIndexPath:indexPath];
+    //if(node.status == GHTestStatusSucceeded || node.status == GHTestStatusErrored){
+    if (dataSource_.isEditing) {
+        [node setSelected:![node isSelected]];
+        [node notifyChanged];
+        // [tableView deselectRowAtIndexPath:indexPath animated:NO];
+        [view_.tableView reloadData];
+    } else {
+        //[tableView deselectRowAtIndexPath:indexPath animated:NO];
+        NSLog(node.isSelected?@"Selected YES": @"Selected NO");
+        if(testViewController == NULL){
+            testViewController = [[GHUnitIOSTestViewController alloc] init];
+            
+            [testViewController setTest:node.test isSelected:node.isSelected];
+            testViewController.delegate = self;
+            [self.navigationController pushViewController:testViewController animated:NO];
+            //testViewController = NULL;
+        }
+        
+    }
+    //}
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   return 36.0f;
 }
 
-#pragma mark Delegates (UIScrollView) 
+- (void ) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    GHTestNode *node = [dataSource_ nodeForIndexPath:indexPath];
+    //if(node.status == GHTestStatusSucceeded || node.status == GHTestStatusErrored){
+    if (dataSource_.isEditing) {
+        [node setSelected:![node isSelected]];
+        [node notifyChanged];
+        // [tableView deselectRowAtIndexPath:indexPath animated:NO];
+        [view_.tableView reloadData];
+    } else {
+        //[tableView deselectRowAtIndexPath:indexPath animated:NO];
+        NSLog(node.isSelected?@"Selected YES": @"Selected NO");
+        if(testViewController == NULL){
+            testViewController = [[GHUnitIOSTestViewController alloc] init];
+            
+            [testViewController setTest:node.test isSelected:node.isSelected];
+            testViewController.delegate = self;
+            [self.navigationController pushViewController:testViewController animated:NO];
+            //testViewController = NULL;
+        }
+        
+    }
+    //}
+}
+
+#pragma mark Delegates (UIScrollView)
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
   userDidDrag_ = YES;
@@ -220,19 +305,24 @@ NSString *const GHUnitFilterKey = @"Filter";
 #pragma mark Delegates (GHTestRunner)
 
 - (void)_setRunning:(BOOL)running runner:(GHTestRunner *)runner {
-  if (running) {
-    view_.filterControl.enabled = NO;
-  } else {
-    view_.filterControl.enabled = YES;
-    GHTestStats stats = [runner.test stats];
-    if (stats.failureCount > 0) {
-      view_.statusLabel.textColor = [UIColor redColor];
+    //NSLog(@"(void)_setRunning:(BOOL)running runner:(GHTestRunner *)runner");
+    if (running) {
+        //NSLog(@"running");
+        view_.filterControl.enabled = NO;
     } else {
-      view_.statusLabel.textColor = [UIColor blackColor];
+        //NSLog(@"else { running");
+        view_.filterControl.enabled = YES;
+        GHTestStats stats = [runner.test stats];
+        if (stats.failureCount > 0) {
+            view_.statusLabel.textColor = [UIColor redColor];
+        } else {
+            view_.statusLabel.textColor = [UIColor blackColor];
+        }
+        
+        runButton_.title = @"Run";
     }
-
-    runButton_.title = @"Run";
-  }
+    
+    //NSLog(@"End of (void)_setRunning:(BOOL)running runner:(GHTestRunner *)runner");
 }
 
 - (void)testRunner:(GHTestRunner *)runner didLog:(NSString *)message {
@@ -266,9 +356,24 @@ NSString *const GHUnitFilterKey = @"Filter";
 }
 
 - (void)testRunnerDidEnd:(GHTestRunner *)runner {
+    NSLog(@"GHunitOSViewController ==>testRunnerDidEnd ");
   [self _setRunning:NO runner:runner];
   [self setStatusText:[dataSource_ statusString:@"Tests finished. "]];
-  
+    if(isHack){
+        
+        //[self.dataSource setThirdNodeStatusNone];
+        //[self reload];
+        /*
+        GHTestNode *tmp = [self.dataSource endNode];
+        if(tmp != nil){
+           [tmp setStatus:GHTestStatusNone];
+           [tmp setSelected:NO];
+           [self reload];
+        }
+        isHack = NO;
+         */
+    }
+
   // Save defaults after test run
   [self saveDefaults];
   
@@ -278,10 +383,11 @@ NSString *const GHUnitFilterKey = @"Filter";
   }
 }
 
+
 #pragma mark Delegates (UISearchBar)
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
-  [searchBar setShowsCancelButton:YES animated:YES];  
+  [searchBar setShowsCancelButton:YES animated:NO];
 }
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
@@ -297,15 +403,34 @@ NSString *const GHUnitFilterKey = @"Filter";
   NSString *textFilter = [self _textFilter];
   searchBar.text = (textFilter ? textFilter : @"");
   [searchBar resignFirstResponder];
-  [searchBar setShowsCancelButton:NO animated:YES]; 
+  [searchBar setShowsCancelButton:NO animated:NO];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
   [searchBar resignFirstResponder];
-  [searchBar setShowsCancelButton:NO animated:YES]; 
+  [searchBar setShowsCancelButton:NO animated:NO];
   
   [self _setTextFilter:searchBar.text];
   [self reload];
+}
+
+#pragma mark GHUnitTableViewDataSource Delegate
+
+-(void) updateRunButtonState:(BOOL)enable{
+    [runButton_ setEnabled:enable];
+    
+    if(enable)
+        selectAllNoneButton_.title = @"Select none";
+    else
+        selectAllNoneButton_.title = @"Select all";
+    
+    [self reload];
+}
+
+#pragma mark GHUnitTestViewController Delegate
+
+-(void) setNullTestViewController{
+    testViewController = NULL;
 }
 
 @end

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Documentation/appledoc_include
+END
+guide_ci-template.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Documentation/appledoc_include/guide_ci-template.markdown
+END
+guide_testing-template.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Documentation/appledoc_include/guide_testing-template.markdown
+END
+guide_install_ios_4-template.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Documentation/appledoc_include/guide_install_ios_4-template.markdown
+END
+guide_install_macosx_4-template.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Documentation/appledoc_include/guide_install_macosx_4-template.markdown
+END
+guide_install_old-template.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Documentation/appledoc_include/guide_install_old-template.markdown
+END
+guide_command_line-template.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Documentation/appledoc_include/guide_command_line-template.markdown
+END

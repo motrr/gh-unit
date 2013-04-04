@@ -312,7 +312,7 @@
 			interval = [NSString stringWithFormat:@"%0.2fs", [test_ interval]];
 
 		if ([test_ status] == GHTestStatusErrored) status = @"✘";
-		else if ([test_ status] == GHTestStatusSucceeded) status = @"✔";
+		else if ([test_ status] == GHTestStatusSucceeded) status = @"✓";
 		else if ([test_ status] == GHTestStatusCancelled) {
 			status = @"-";
 			interval = @"";
@@ -366,6 +366,9 @@
 
 - (GHTestStatus)status {
 	return [test_ status];
+}
+- (void) setStatus:(GHTestStatus)status{
+    [test_ setStatus:status];
 }
 
 - (NSString *)stackTrace {

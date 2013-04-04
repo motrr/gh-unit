@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/XcodeConfig
+END
+GHUnit-Debug.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/XcodeConfig/GHUnit-Debug.xcconfig
+END
+Shared.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/XcodeConfig/Shared.xcconfig
+END
+iOSDevice-Release.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/XcodeConfig/iOSDevice-Release.xcconfig
+END
+iOSSimulator-Release.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/XcodeConfig/iOSSimulator-Release.xcconfig
+END
+GHUnit-Release.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/XcodeConfig/GHUnit-Release.xcconfig
+END
+iOSTests.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/XcodeConfig/iOSTests.xcconfig
+END
+GHUnit.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/XcodeConfig/GHUnit.xcconfig
+END
+Shared-iOS.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/XcodeConfig/Shared-iOS.xcconfig
+END
+iOSDevice-Debug.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/XcodeConfig/iOSDevice-Debug.xcconfig
+END
+iOSSimulator-Debug.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/XcodeConfig/iOSSimulator-Debug.xcconfig
+END

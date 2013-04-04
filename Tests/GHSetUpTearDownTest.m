@@ -54,14 +54,6 @@ static NSInteger tearDownClassCount = 0;
   if (setUpClassCount == 0) GHFail(@"setUpClass never called");
 }
 
-- (void)test2 {
-  
-}
-
-- (void)test3 { 
-
-}
-
 @end
 
 @interface GHSetUpClassFailureTest : GHTestCase { }
@@ -75,7 +67,6 @@ static NSInteger tearDownClassCount = 0;
 
 
 - (void)test1_EXPECTED { }
-- (void)test2_EXPECTED { }
 
 @end
 
@@ -90,7 +81,6 @@ static NSInteger tearDownClassCount = 0;
 
 
 - (void)test1_EXPECTED { }
-- (void)test2_EXPECTED { }
 
 @end
 

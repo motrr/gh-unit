@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-MacOSX
+END
+RunTests.sh
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-MacOSX/RunTests.sh
+END
+MyTestable_MacOSXAppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-MacOSX/MyTestable_MacOSXAppDelegate.h
+END
+Tests-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-MacOSX/Tests-Info.plist
+END
+MyTestable_MacOSX-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-MacOSX/MyTestable_MacOSX-Info.plist
+END
+MyTestable_MacOSX_Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-MacOSX/MyTestable_MacOSX_Prefix.pch
+END
+MyTestable_MacOSXAppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-MacOSX/MyTestable_MacOSXAppDelegate.m
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-MacOSX/Makefile
+END
+GHUnitTestMain.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/ScopicSoftware/GHUnit/svn/!svn/ver/1/gh-unit/Examples/MyTestable-MacOSX/GHUnitTestMain.m
+END

@@ -30,7 +30,6 @@
 #import "GHUnitIOSAppDelegate.h"
 #import "GHUnitIOSViewController.h"
 #import "GHUnit.h"
-
 @interface GHUnitIOSAppDelegate (Terminate)
 - (void)_terminateWithStatus:(int)status;
 @end
