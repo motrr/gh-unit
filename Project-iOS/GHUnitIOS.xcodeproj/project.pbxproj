@@ -1032,6 +1032,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0041C60713BA7BEF0015FC22 /* iOSDevice-Debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1042,6 +1043,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0041C60813BA7BEF0015FC22 /* iOSDevice-Release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
